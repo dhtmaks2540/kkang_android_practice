@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".BrunchActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/brunch_img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="30dp"
+                    android:maxHeight="30dp"
+                    android:src="@drawable/icon_close"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="글쓰기"
+                    app:layout_constraintBottom_toBottomOf="@id/brunch_img1"
+                    app:layout_constraintEnd_toStartOf="@id/brunch_img2"
+                    app:layout_constraintStart_toEndOf="@id/brunch_img1"
+                    app:layout_constraintTop_toTopOf="@id/brunch_img1" />
+
+                <ImageView
+                    android:id="@+id/brunch_img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="30dp"
+                    android:maxHeight="30dp"
+                    android:src="@drawable/icon_ok"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/brunch_view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#D3D0D0"
+                app:layout_constraintTop_toBottomOf="@id/brunch_img1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:hint="제목"
+                    android:id="@+id/brunch_edit1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:inputType="text" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="30dp"
+                    android:maxHeight="30dp"
+                    android:src="@drawable/icon_layer" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/brunch_view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#D3D0D0"
+                app:layout_constraintTop_toBottomOf="@id/brunch_edit1" />
+
+            <EditText
+                android:hint="소제목"
+                android:id="@+id/brunch_edit2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/brunch_view2" />
+
+            <View
+                android:id="@+id/brunch_view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#D3D0D0"
+                app:layout_constraintTop_toBottomOf="@id/brunch_edit2" />
+
+            <EditText
+                android:gravity="top"
+                android:id="@+id/brunch_edit3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="내용을 입력하세요"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:lines="5" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/brunch_view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#D3D0D0"
+        app:layout_constraintBottom_toTopOf="@id/brunch_linear" />
+
+    <LinearLayout
+        android:id="@+id/brunch_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="30dp"
+            android:maxHeight="30dp"
+            android:src="@drawable/icon_photo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="30dp"
+            android:maxHeight="30dp"
+            android:src="@drawable/icon_color" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="30dp"
+            android:maxHeight="30dp"
+            android:src="@drawable/icon_align" />
+
+    </LinearLayout>
+
+</LinearLayout>

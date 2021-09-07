@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="search_array">
+        <item>우편번호 검색</item>
+        <item>지도검색</item>
+        <item>대법원 나의 사건 검색</item>
+        <item>나의 사진 검색</item>
+        <item>주소검색</item>
+        <item>다음지도 검색</item>
+        <item>검색등록</item>
+    </string-array>
+</resources>

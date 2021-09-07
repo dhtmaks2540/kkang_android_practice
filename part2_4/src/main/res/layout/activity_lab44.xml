@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Lab4_4Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="7" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="8" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="9" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="4" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="5" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="6" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="1" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="2" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="3" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="." />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="0" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:text="=" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:text="DEL"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp"/>
+
+            <Button
+                android:text="%"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp"/>
+
+            <Button
+                android:text="X"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp"/>
+
+            <Button
+                android:text="-"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp"/>
+
+            <Button
+                android:text="+"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp"/>
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
