@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PreferenceFragmentCompat을 상속한다해도 Activity가 아니기 때문에 화면의 띄우기 X -->
+<!-- 따라서 액티비티의 레이아웃 XML 파일에서 <fragment> 태그를 이용해 PreferenceFragmentCompat 서브 클래스를 등록 -->
+<!-- name에서 전체 패키지명 입력 -->
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings_fragment"
+    android:name="kr.co.lee.part6_17.SettingPreferenceFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</fragment>
