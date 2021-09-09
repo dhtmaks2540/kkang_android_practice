@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/mission2_group1">
+        <item
+            android:id="@+id/mission2_menu1"
+            android:icon="@android:drawable/ic_menu_search"
+            android:title="환경설정" />
+    </group>
+    <item android:title="필터링">
+        <menu>
+            <group android:id="@+id/mission2_group2">
+                <item
+                    android:id="@+id/mission2_menu2"
+                    android:icon="@android:drawable/ic_menu_day"
+                    android:title="지역별보기" />
+                <item
+                    android:id="@+id/mission2_menu3"
+                    android:icon="@android:drawable/ic_menu_add"
+                    android:title="종류별 보기" />
+            </group>
+        </menu>
+    </item>
+
+</menu>
