@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity(){
                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_marker))
                     markerOptions.position(msg.obj as LatLng)
                     markerOptions.title("서울시립미술관")
-                    map.addMarker(markerOptions)
+                    map?.addMarker(markerOptions)
                 }
             }
         }
