@@ -12,8 +12,21 @@ import kotlin.Exception
 
 class HttpImageRequester {
 
+    var http: HttpImageTask? = null
 
-    private class HttpImageTast(val url: String, val param: HashMap<String,String>, val callback: HttpImageCallback):
+    fun request(url: String, param: HashMap<String, String>?, callback: HttpImageCallback) {
+        http = HttpImageTask(url, param, callback)
+        http?.execute()
+    }
+
+    fun cancel() {
+        if(http != null) {
+            http?.cancel(true)
+        }
+    }
+
+
+    class HttpImageTask(val url: String, val param: HashMap<String,String>?, val callback: HttpImageCallback):
         AsyncTask<Void, Void, Bitmap>() {
 
         override fun doInBackground(vararg params: Void?): Bitmap {

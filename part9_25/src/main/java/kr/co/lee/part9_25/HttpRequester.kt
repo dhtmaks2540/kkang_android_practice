@@ -38,6 +38,7 @@ class HttpRequester {
                 http.requestMethod = "POST"
                 http.doInput = true
                 http.doOutput = true
+                // 서버에 전송하기 데이터를 웹의 Query 문자열 형식으로 변형
                 if (param != null && param.size > 0) {
                     val entries: Iterator<Map.Entry<String, String>> = param.entries.iterator()
                     var index = 0
@@ -52,10 +53,12 @@ class HttpRequester {
                         )
                         index++
                     }
+                    // 데이터 전송
                     pw = PrintWriter(OutputStreamWriter(http.outputStream, "UTF-8"))
                     pw.write(postData)
                     pw.flush()
                 }
+                ///서버로부터 데이터 수신
                 `in` = BufferedReader(InputStreamReader(http.inputStream, "UTF-8"))
                 val sb = StringBuffer()
                 var inputLine: String?
