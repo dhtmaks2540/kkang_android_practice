@@ -1,0 +1,99 @@
+<!-- 데이터 바인딩을 사용하기 위한 레이아웃 태그 -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <!-- 데이터 태그를 사용해 코드의 데이터가 자동으로 Xml의 뷰 객체에 대입 -->
+    <data>
+        <!-- Xml에서 사용하고자 하는 변수 선언 -->
+        <variable
+            name="item"
+            type="kr.co.lee.part10_27.ItemModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <!-- 데이터 바인딩을 사용해서 item 변수의 title 값 넣기 -->
+                <TextView
+                    android:id="@+id/lab3_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#212121"
+                    android:textSize="14sp"
+                    android:text="@{item.title}"
+                    />
+
+
+                <!-- 임의의 속성을 선언해서 BindingAdapter로 속성을 위한 함수를 실행 -->
+                <TextView
+                    android:id="@+id/lab3_item_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lab3_item_title"
+                    android:layout_marginTop="3dp"
+                    android:textColor="#727272"
+                    android:textSize="12sp"
+                    bind:publishedAt="@{item.publishedAt}"
+                    />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/lab3_item_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="2dp"
+            android:paddingLeft="10dp"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:text="@{item.description}"
+            />
+
+
+        <ImageView
+            android:id="@+id/lab3_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="fitXY"
+            bind:urlToImage="@{item.urlToImage}"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:background="#40000000" />
+
+    </LinearLayout>
+</layout>

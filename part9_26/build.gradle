@@ -47,7 +47,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
 //    implementation 'com.google.firebase:firebase-code:16.0.4'
-    implementation 'com.google.firebase:firebase-messaging:17.3.3'
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

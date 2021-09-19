@@ -8,6 +8,6 @@ class MyFirebaseInstanceIDService: FirebaseMessagingService() {
     override fun onNewToken(p0: String) {
         // Fcm 서버로부터 얻은 키 값
         val token = FirebaseMessaging.getInstance().token
-        Log.d("Change!!!!", "token : $token")
+        Log.d("FCM LOG", "token : $token")
     }
 }
