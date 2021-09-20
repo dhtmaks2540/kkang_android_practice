@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             val adapter = MyAdapter(it)
             binding.recyclerView.adapter = adapter
         })
+
     }
 
     class ItemViewHolder(val binding: ItemMainBinding): RecyclerView.ViewHolder(binding.root)
